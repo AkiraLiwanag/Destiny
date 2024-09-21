@@ -15,7 +15,7 @@ print("[This saves to DESTINY-logs.txt]")
 print()
 print(file=z)
 def version():
-    title =  usr + "" + " " + "" + ">>> Outbeat Produce: DESTINY-1.1 by A.A.P.L."
+    title =  usr + "" + " " + "" + ">>> Outbeat Produce: DESTINY-1.2 by A.A.P.L."
     ct = datetime.datetime.now()
     print(title, ct)
     print(title, ct, file=z)
@@ -38,13 +38,25 @@ diction = ["how are you", "i am fine", "youre welcome", "i dont know", "maybe", 
 
 
 def commands():
-    print(" version | [blank input] for nano | note / journal / save | search | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, dhammapada, skate, art, give alms, radio, hack, message [lh], brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, archery, color key, doodling, BUMP, MA, Magic, ascii, zen melody, monopoly, light incense, stats, prayer, progress, collections, football, c, map, print time, entry, posting, koran, heBrews, Medicals (M), Clearance, MiCasa, stuff, worship, Earth Science (SCI), value, psychology (psyc), Patient Simu, biology (B), legal terms (Law), the heart sutra, License, police (prad), climb, chemistry (ch), weapon start [wstart], teletubby, (ai) auto-mat [AAM], {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, [ID / IDC], [echo], monitor-start [mstart]")
+    print(" version | [blank input] for nano | note / journal / save | search | pray, sleep, eat, meditate, draw card, slot, find coins, search for items, fly, drink coffee, drink tea, surf, dhammapada, skate, art, give alms, radio, hack, message [lh], brawl, souls, hipster tarot, mp3, spar, train, rest, psalms, haiku, karate, koans, equips, rpg, archery, color key, doodling, BUMP, MA, Magic, ascii, zen melody, monopoly, light incense, stats, prayer, progress, collections, football, c, map, print time, entry, posting, koran, heBrews, Medicals (M), Clearance, MiCasa, stuff, worship, Earth Science (SCI), value, psychology (psyc), Patient Simu, biology (B), legal terms (Law), the heart sutra, License, police (prad), climb, chemistry (ch), weapon start [wstart], teletubby, (ai) auto-mat [AAM], {[muslim prayer] fajr (before dawn) / dhuhr (noon) / asr (late afternoon) / maghrib (at sunset) / isha (nighttime)}, [ID / IDC], [echo], monitor-start [mstart], change username [username/user]")
 
 def print_time():
     t_time = datetime.datetime.now()
     l_time = "Time: "
     print(l_time, t_time)
     print(usr, l_time, t_time, file=z)
+
+def change_username():
+    def set_usr(newUsr):
+        global usr
+        usr = newUsr
+    new = input("Session username: ")
+    set_usr("[" + "" + new + "" + "]" + "" + " " + "" + "$" + "" + " ")
+    m = open("monitor-logs.txt", "a", buffering=1)
+    ct = datetime.datetime.now()
+    monitor = "Username changed in 1 session:"
+    print(monitor, usr, ct, file=m)
+    print(file=m)
 
 def note():
     t_time = datetime.datetime.now()
@@ -1821,6 +1833,9 @@ def choice():
             
         if choice == 'print time':
             print_time()
+
+        if choice == 'change username' or choice == 'username' or choice == 'user':
+            change_username()
 
         if choice == 'note':
             note()
