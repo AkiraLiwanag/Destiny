@@ -1803,8 +1803,7 @@ def weapon_start():
         threading.Thread(target=call_random_function).start()
 
 def monitor_start():
-    dd = (diction)
-    nano = (random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), random.choice(dd), )
+    nano = (diction)
     m = open("monitor-logs.txt", "a", buffering=1)
     ct = datetime.datetime.now()
     monitor = "monitor-start:"
