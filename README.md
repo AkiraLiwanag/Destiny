@@ -1,3 +1,6 @@
+THIS PROJECT HAS SINCE MOVED TO http://github.com/akiraliwanag/bratholes 
+---------------------------------------------------------------------------
+
 A Life game, created by Akira P. Liwanag Outbeat Production
 
 "Like ripples in a pond when a rock is thrown.."
@@ -12,4 +15,4 @@ Functions: version | [blank input] for nano | note / journal / save | search | p
 
 *Each session automatically saves to the single text file "DESTINY-logs.txt"
 
-WEB-APP : https://akiraliwanag.pyscriptapps.com/destiny/latest LIFE-pro.nano : https://is-life-pro.weebly.com 
+WEB-APP : https://akiraliwanag.pyscriptapps.com/destiny/latest Destiny.nano : https://akiraliwanag.github.io 
